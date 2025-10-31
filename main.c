@@ -79,16 +79,18 @@ int main(int argc, char *argv[])
      *  - Decoding: a.out -d <stego.bmp> [output_secret_base]
      */
 
-    
+    printf("=============================================\n");
+    printf("🖼️  IMAGE STEGANOGRAPHY USING LSB TECHNIQUE  \n");
+    printf("=============================================\n");
     // Step 1 : Check the argc >= 4 true - > step 2
     if (argc >= 4)
     {
-        // Step 2 : Call the check_operation_type(argv[1]) == e_encode )) true - > step 3
+        // Step 2 : Call the check_operation_type((argv[1]) == e_encode ) true - > step 3
         if (check_operation_type(argv[1]) == e_encode)
         {
             // Step 3 : Declare structure variable EncodeInfo enc_info
             EncodeInfo enc_Info;
-            // Step 4 : Call the read_and_validate_encode_args(argv,&enc_info)== e_success)
+            // Step 4 : Call the read_and_validate_encode_args(argv,&enc_info)== e_success)))))
             if (read_and_validate_encode_args(argv, &enc_Info) == e_success)
             {
                 //  true -> Step 5 ,
@@ -99,6 +101,11 @@ int main(int argc, char *argv[])
                     printf("\n-----------------------------------\n");
                     printf("💾 Output stego file: %s\n", enc_Info.stego_image_fname);
                     printf("-----------------------------------\n");
+                }
+                else{
+                    printf("\n------------------------------------------------------\n");
+                    printf(" ❌ Error: decoding failed.");
+                    printf("\n------------------------------------------------------\n");
                 }
             }
             else
@@ -112,9 +119,6 @@ int main(int argc, char *argv[])
         {
             // for decoding
             DecodeInfo dcd_Info;
-            printf("=============================================\n");
-            printf("🖼️  IMAGE STEGANOGRAPHY USING LSB TECHNIQUE  \n");
-            printf("=============================================\n");
 
             printf("=============================================\n");
             printf("🔓 DECODING MODE SELECTED\n");
@@ -140,12 +144,16 @@ int main(int argc, char *argv[])
                     }
                     else
                     {
-                        printf("Error: decoding failed.\n");
+                        printf("\n------------------------------------------------------\n");
+                        printf(" ❌ Error: decoding failed.");
+                        printf("\n=======================================================\n");
                     }
                 }
                 else
                 {
-                    printf("The provided file does not appear to be encoded. Please supply a valid encoded BMP.\n");
+                    printf("\n------------------------------------------------------\n");
+                    printf(" ❌ The provided file does not appear to be encoded. Please supply a valid encoded BMP.");
+                    printf("\n==========================================================\n");
                 }
             }
             else
@@ -155,13 +163,17 @@ int main(int argc, char *argv[])
         }
         else
         {
-            printf("Unsupported operation. Use -e to encode or -d to decode.\n");
+            printf("\n------------------------------------------------------\n");
+            printf(" ❌ Unsupported operation. Use -e to encode or -d to decode.");
+            printf("\n========================================================\n");
             return 0;
         }
     }
     else
     {
-        printf("Insufficient arguments. See usage: a.out -e <source.bmp> <secret> [output.bmp]  OR  a.out -d <stego.bmp> [output_secret_base]\n");
+        printf("\n------------------------------------------------------\n");
+        printf(" ❌ Insufficient arguments. \nSee usage: \na.out -e <source.bmp> <secret> [output.bmp]  OR  \na.out -d <stego.bmp> [output_secret_base]\n");
+        printf("==========================================================\n");
         return 0;
     }
 }

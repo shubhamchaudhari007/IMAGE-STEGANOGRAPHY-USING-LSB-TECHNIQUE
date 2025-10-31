@@ -319,9 +319,7 @@ Status do_encoding(EncodeInfo *encInfo)
     if (open_files(encInfo) == e_success)
     {
         /* Print a friendly header and input/output summary */
-        printf("=============================================\n");
-        printf("🖼️  IMAGE STEGANOGRAPHY USING LSB TECHNIQUE  \n");
-        printf("=============================================\n");
+        
         printf("\n=============================================\n");
         printf("🔐 ENCODING MODE SELECTED\n");
         printf("=============================================\n");
