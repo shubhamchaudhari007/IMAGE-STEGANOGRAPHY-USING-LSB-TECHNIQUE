@@ -49,11 +49,17 @@ In this project, the data is embedded into the **Least Significant Bits** of the
 
 Image-Steganography/
 │
+
 ├── main.c # Main program file (handles encode/decode selection)
+
 ├── encode.c / encode.h # Encoding logic implementation
+
 ├── decode.c / decode.h # Decoding logic implementation
+
 ├── types.h # Custom datatypes and enums (e.g., Status, OperationType)
+
 ├── common.h # Shared constants (like MAGIC_STRING)
+
 └── README.md # Project documentation (this file)
 
 
