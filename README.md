@@ -60,6 +60,14 @@ Image-Steganography/
 
 ├── common.h # Shared constants (like MAGIC_STRING)
 
+├── beautiful.bmp - (.bmp image file for encoding)
+
+├── secret.txt - (secret message file that is enbedded in image and hide information in image)
+
+├── Output.bmp (the secret file message encodded file . the image file contains secret message)
+
+├── texxt.txt (the secret message retrived from output.bmp file)
+
 └── README.md # Project documentation (this file)
 
 
