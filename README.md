@@ -1,5 +1,10 @@
 # 🖼️ Image Steganography using LSB Technique in C
 
+![Language](https://img.shields.io/badge/Language-C-blue)
+![Status](https://img.shields.io/badge/Project%20Type-Console%20App-brightgreen)
+![License](https://img.shields.io/badge/License-Open%20Source-yellow)
+![Made With ❤️](https://img.shields.io/badge/Made%20With-%E2%9D%A4-red)
+
 ### 🔐 Hide Your Secrets Inside an Image (24-bit BMP Only)
 
 This project implements **Image Steganography** using the **Least Significant Bit (LSB)** technique — developed entirely in **C programming**.  
