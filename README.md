@@ -99,7 +99,7 @@ Image-Steganography/
 ### 🔸 1. Compile the Project
 
 If you’re using multiple `.c` files:
-```bash
+```
 gcc main.c encode.c decode.c 
 
 Encode Syntax : 
@@ -150,5 +150,66 @@ Decode Syntax :
 
 
 your decoded file will be store in your repository as name Decode.bmp
+
+```
+
+---
+
+
+## ⚠️ Important Notes
+
+Works only with 24-bit uncompressed BMP files (other formats like PNG or JPG are not supported).
+
+Make sure your message size fits within the image capacity (based on number of pixels).
+
+Do not open or compress the encoded image before decoding — it may corrupt the hidden data.
+
+Use simple text files (.txt) for messages.
+
+---
+
+## 🧠 Technical Highlights
+
+Uses Least Significant Bit (LSB) substitution to hide message bits inside RGB pixel bytes.
+
+Reads and modifies pixel data byte by byte without altering image headers.
+
+Ensures message length is encoded at the beginning for accurate decoding.
+
+Demonstrates bitwise operations (AND, OR, SHIFT) for data embedding.
+
+---
+
+## 🧰 Requirements
+
+GCC compiler or any C compiler.
+
+Linux / Windows / macOS terminal.
+
+24-bit BMP image file.
+
+Text file (.txt) containing secret message.
+
+---
+
+## 💬 Future Enhancements
+
+🔐 Password-protected encoding/decoding.
+
+🧮 Support for multiple image formats (PNG, JPG).
+
+🧾 GUI-based interface using GTK or Qt.
+
+📁 Support for hiding larger files (not just text).
+
+---
+
+## 🏁 Conclusion
+
+This Image Steganography project showcases how hidden communication can be achieved through simple C programming and bit manipulation techniques. It’s a perfect project for students learning file I/O, bit-level programming, and data security concepts.
+
+💡 "Sometimes, the safest place to hide something is in plain sight."
+
+---
 
 © 2025 Shubham Chaudhari. All Rights Reserved.
